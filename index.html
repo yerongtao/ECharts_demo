@@ -3,8 +3,86 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
+
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/echarts.main.js"></script>
+    <script type="text/javascript" src="js/echarts.main.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .chart-c {
+            height: 810px;
+            width: 480px;
+            margin: 10px auto;
+        }
+        .chart-l {
+            height: 400px;
+            width: 380px;
+            margin: 10px;
+        }
+        .chart-r {
+            height: 400px;
+            width: 380px;
+            margin: 10px;
+        }
+        .chart {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        .chart-body {
+            display: flex;
+            flex: 1;
+        }
+        .chart-content {
+            flex: 1;
+        }
+        .chart-left, .chart-right {
+            /* 两个边栏的宽度设为12em */
+            /*flex: 0 0 12em;*/
+        }
+        .chart-left {
+            /* 放到最左边 */
+            order: -1;
+        }
+        /*header,
+        footer {
+            flex: 1;
+            background-color: #0a7bbf;
+        }*/
+
+    </style>
+
 </head>
 <body>
+
+<nav>
+
+
+</nav>
+
+<div class="chart">
+<!--<header>...</header>-->
+<div class="chart-body">
+    <div class="chart-content">
+        <div id="myChart3" class="chart-c"></div>
+    </div>
+    <div class="chart-left">
+        <div id="myChart1" class="chart-l"></div>
+        <div id="myChart2" class="chart-l"></div>
+    </div>
+    <div class="chart-right">
+        <div id="myChart4" class="chart-r"></div>
+        <div id="myChart5" class="chart-r"></div>
+    </div>
+</div>
+<!--<footer>...</footer>-->
+</div>
+
+
 
 </body>
 </html>

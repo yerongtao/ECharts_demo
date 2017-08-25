@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex布局</title>
+    <style>
+        .chart_l {
+            height: 500px;
+            width: 500px;
+            margin: 20px;
+            background-color: #4a0080;
+        }
+        .chart_c {
+            height: 1000px;
+            width: 800px;
+        }
+        .chart_r {
+            height: 500px;
+            width: 500px;
+            margin: 20px;
+            /*display: -webkit-flex;*/
+            background-color: #8a6d3b;
+        }
+
+        .HolyGrail {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        header,
+        footer {
+            flex: 1;
+            background-color: #0a7bbf;
+        }
+
+        .HolyGrail-body {
+            display: flex;
+            flex: 1;
+            background-color: #5bc0de;
+        }
+
+        .HolyGrail-content {
+            flex: 1;
+            background-color: #0AC927;
+        }
+
+        .HolyGrail-nav, .HolyGrail-ads {
+            /* 两个边栏的宽度设为12em */
+            flex: 0 0 12em;
+        }
+
+        .HolyGrail-nav {
+            /* 导航放到最左边 */
+            order: -1;
+            background-color: red;
+        }
+
+        @media (max-width: 768px) {
+            .HolyGrail-body {
+                flex-direction: column;
+                flex: 1;
+            }
+            .HolyGrail-nav,
+            .HolyGrail-ads,
+            .HolyGrail-content {
+                flex: auto;
+            }
+        }
+
+        .Grid {
+            margin-top: 20px;
+            height: 300px;
+            display: flex;
+        }
+
+        .Grid-cell {
+            flex: 1;
+            background-color: red;
+        }
+
+        .Grid-cell.u-full {
+            flex: 0 0 100%;
+            background-color: #0a7bbf;
+        }
+
+        .Grid-cell.u-1of2 {
+            flex: 0 0 50%;
+            background-color: #8a6d3b;
+        }
+
+        .Grid-cell.u-1of3 {
+            flex: 0 0 33.3333%;
+            background-color: #e4b9b9;
+        }
+
+        .Grid-cell.u-1of4 {
+            flex: 0 0 25%;
+            background-color: #6A8E15;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="HolyGrail">
+    <header>...</header>
+    <div class="HolyGrail-body">
+        <div class="HolyGrail-content">...
+
+        </div>
+        <div class="HolyGrail-nav">...
+            <div id="myChart1" class="chart_l"></div>
+            <div id="myChart2" class="chart_l"></div>
+        </div>
+        <div class="HolyGrail-ads">...
+            <div id="myChart4" class="chart_r"></div>
+            <div id="myChart5" class="chart_r"></div>
+        </div>
+    </div>
+    <footer>...</footer>
+</div>
+
+
+<div class="Grid">
+    <div class="Grid-cell u-1of2">...</div>
+    <div class="Grid-cell">...</div>
+    <div class="Grid-cell u-1of3">...</div>
+</div>
+
+
+</body>
+</html>
